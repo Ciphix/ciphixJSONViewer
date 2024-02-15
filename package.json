@@ -1,0 +1,43 @@
+{
+  "name": "bizzomatejsonviewer",
+  "widgetName": "BizzomateJSONViewer",
+  "version": "1.0.0",
+  "description": "View JSON strings with markup in Mendix",
+  "copyright": "© Bizzomate BV 2023",
+  "author": "Jelle Dekker",
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "Apache-2.0",
+  "config": {
+    "projectPath": "./tests/testProject",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": 3000
+  },
+  "packagePath": "bizzomate",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:server",
+    "dev": "pluggable-widgets-tools start:web",
+    "build": "pluggable-widgets-tools build:web",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:web"
+  },
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^10.5.0",
+    "@types/big.js": "^6.0.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "@uiw/react-json-view": "^2.0.0-alpha.12"
+  },
+  "resolutions": {
+    "react": "18.2.0",
+    "react-native": "0.70.7"
+  },
+  "overrides": {
+    "react": "18.2.0",
+    "react-native": "0.70.7"
+  }
+}
