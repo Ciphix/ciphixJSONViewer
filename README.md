@@ -1,4 +1,4 @@
-## BizzomateJSONViewer
+## CiphixJSONViewer
 [View JSON strings with markup in Mendix]
 
 ## Features

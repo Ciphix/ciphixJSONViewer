@@ -1,11 +1,11 @@
 /**
- * This file was generated from BizzomateJSONViewer.xml
+ * This file was generated from CiphixJSONViewer.xml
  * WARNING: All changes made to this file will be overwritten
  * @author Mendix Widgets Framework Team
  */
 import { DynamicValue, EditableValue } from "mendix";
 
-export interface BizzomateJSONViewerContainerProps {
+export interface CiphixJSONViewerContainerProps {
     name: string;
     tabIndex?: number;
     id: string;
@@ -19,7 +19,7 @@ export interface BizzomateJSONViewerContainerProps {
     collapsed: number;
 }
 
-export interface BizzomateJSONViewerPreviewProps {
+export interface CiphixJSONViewerPreviewProps {
     readOnly: boolean;
     jsonString: string;
     emptyMessage: string;

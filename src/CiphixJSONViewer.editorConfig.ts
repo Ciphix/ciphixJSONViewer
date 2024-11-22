@@ -1,4 +1,4 @@
-import { BizzomateJSONViewerPreviewProps } from "../typings/BizzomateJSONViewerProps";
+import { CiphixJSONViewerPreviewProps } from "../typings/CiphixJSONViewerProps";
 
 export type Platform = "web" | "desktop";
 
@@ -100,7 +100,7 @@ export type PreviewProps =
     | DatasourceProps;
 
 export function getProperties(
-    _values: BizzomateJSONViewerPreviewProps,
+    _values: CiphixJSONViewerPreviewProps,
     defaultProperties: Properties /* , target: Platform*/
 ): Properties {
     // Do the values manipulation here to control the visibility of properties in Studio and Studio Pro conditionally.

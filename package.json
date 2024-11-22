@@ -1,9 +1,9 @@
 {
-  "name": "bizzomatejsonviewer",
-  "widgetName": "BizzomateJSONViewer",
+  "name": "ciphixjsonviewer",
+  "widgetName": "ciphixJSONViewer",
   "version": "1.0.0",
   "description": "View JSON strings with markup in Mendix",
-  "copyright": "© Bizzomate BV 2023",
+  "copyright": "© Ciphix IO 2024",
   "author": "Jelle Dekker",
   "engines": {
     "node": ">=16"
@@ -14,7 +14,7 @@
     "mendixHost": "http://localhost:8080",
     "developmentPort": 3000
   },
-  "packagePath": "bizzomate",
+  "packagePath": "ciphix",
   "scripts": {
     "start": "pluggable-widgets-tools start:server",
     "dev": "pluggable-widgets-tools start:web",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "@uiw/react-json-view": "^2.0.0-alpha.12"
+    "@uiw/react-json-view": "^2.0.0-alpha.30"
   },
   "resolutions": {
     "react": "18.2.0",
