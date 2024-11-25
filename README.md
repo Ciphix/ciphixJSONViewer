@@ -1,24 +1,13 @@
 ## CiphixJSONViewer
-[View JSON strings with markup in Mendix]
+Easily display JSON entries in a pretty format directly in the Mendix UI. Pluggable widget based on react-json-view
 
 ## Features
-[feature highlights]
+- Plug and play JSON viewer
+- Comes with plenty of options to configure your view (indent, hiding of levels etc)
 
 ## Usage
-[step by step instructions]
-
-## Demo project
-[link to sandbox]
+- Add the widget to a page
+- Connect the attribute containing your JSON content
 
 ## Issues, suggestions and feature requests
-[link to GitHub issues]
-
-## Development and contribution
-
-1. Install NPM package dependencies by using: `npm install`. If you use NPM v7.x.x, which can be checked by executing `npm -v`, execute: `npm install --legacy-peer-deps`.
-1. Run `npm start` to watch for code changes. On every change:
-    - the widget will be bundled;
-    - the bundle will be included in a `dist` folder in the root directory of the project;
-    - the bundle will be included in the `deployment` and `widgets` folder of the Mendix test project.
-
-[specify contribution]
+[\[link to GitHub issues\]](https://github.com/Ciphix/ciphixJSONViewer/issues)
