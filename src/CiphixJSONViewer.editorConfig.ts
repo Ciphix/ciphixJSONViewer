@@ -129,7 +129,7 @@ export function getProperties(
 
 export function getPreview(
     values: CiphixJSONViewerPreviewProps,
-    isDarkMode: boolean /*, version: number[]*/
+    isDarkMode: boolean /* , version: number[]*/
 ): PreviewProps {
     // Customize your pluggable widget appearance for Studio Pro.
     return {
@@ -149,7 +149,7 @@ export function getPreview(
                         grow: 0,
                         fontColor: isDarkMode ? "#1c6bf1" : "#236a7c"
                     },
-                    { type: "Container", children:[] }
+                    { type: "Container", children: [] }
                 ]
             },
             {
@@ -177,7 +177,7 @@ export function getPreview(
                         grow: 0,
                         fontColor: isDarkMode ? "#1c6bf1" : "#236a7c"
                     },
-                    { type: "Container", children:[] }
+                    { type: "Container", children: [] }
                 ]
             },
             {
@@ -186,7 +186,7 @@ export function getPreview(
                 children: [
                     {
                         type: "Text",
-                        content: "      \"JSON-String\"",
+                        content: '      "JSON-String"',
                         fontSize: 10,
                         grow: 0,
                         fontColor: isDarkMode ? "#1c6bf1" : "#236a7c"
@@ -200,7 +200,7 @@ export function getPreview(
                     },
                     {
                         type: "Text",
-                        content: "\"" + values.jsonString + "\"",
+                        content: '"' + values.jsonString + '"',
                         fontSize: 10,
                         grow: 0,
                         fontColor: isDarkMode ? "#ce916a" : "#cb4b16"
@@ -212,7 +212,7 @@ export function getPreview(
                         grow: 0,
                         fontColor: isDarkMode ? "#fff" : "#333"
                     },
-                    { type: "Container", children:[] }
+                    { type: "Container", children: [] }
                 ]
             },
             {
@@ -221,7 +221,7 @@ export function getPreview(
                 children: [
                     {
                         type: "Text",
-                        content: "      \"Empty message\"",
+                        content: '      "Empty message"',
                         fontSize: 10,
                         grow: 0,
                         fontColor: isDarkMode ? "#1c6bf1" : "#236a7c"
@@ -235,12 +235,12 @@ export function getPreview(
                     },
                     {
                         type: "Text",
-                        content: "\"" + values.emptyMessage + "\"",
+                        content: '"' + values.emptyMessage + '"',
                         fontSize: 10,
                         grow: 0,
                         fontColor: isDarkMode ? "#ce916a" : "#cb4b16"
                     },
-                    { type: "Container", children:[] }
+                    { type: "Container", children: [] }
                 ]
             },
             {
@@ -254,7 +254,7 @@ export function getPreview(
                         grow: 0,
                         fontColor: isDarkMode ? "#1c6bf1" : "#236a7c"
                     },
-                    { type: "Container", children:[] }
+                    { type: "Container", children: [] }
                 ]
             }
         ]
