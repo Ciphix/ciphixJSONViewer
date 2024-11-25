@@ -127,13 +127,139 @@ export function getProperties(
 //     return errors;
 // }
 
-// export function getPreview(values: BizzomateJSONViewerPreviewProps, isDarkMode: boolean, version: number[]): PreviewProps {
-//     // Customize your pluggable widget appearance for Studio Pro.
-//     return {
-//         type: "Container",
-//         children: []
-//     }
-// }
+export function getPreview(
+    values: CiphixJSONViewerPreviewProps,
+    isDarkMode: boolean /*, version: number[]*/
+): PreviewProps {
+    // Customize your pluggable widget appearance for Studio Pro.
+    return {
+        type: "Container",
+        borders: true,
+        borderRadius: 2,
+        backgroundColor: isDarkMode ? "#646464" : "#fefefe",
+        children: [
+            {
+                type: "RowLayout",
+                columnSize: "grow",
+                children: [
+                    {
+                        type: "Text",
+                        content: "{",
+                        fontSize: 10,
+                        grow: 0,
+                        fontColor: isDarkMode ? "#1c6bf1" : "#236a7c"
+                    },
+                    { type: "Container", children:[] }
+                ]
+            },
+            {
+                type: "RowLayout",
+                columnSize: "grow",
+                children: [
+                    {
+                        type: "Text",
+                        content: '  "Data source"',
+                        fontSize: 10,
+                        grow: 0,
+                        fontColor: isDarkMode ? "#1c6bf1" : "#236a7c"
+                    },
+                    {
+                        type: "Text",
+                        content: " : ",
+                        fontSize: 10,
+                        grow: 0,
+                        fontColor: isDarkMode ? "#fff" : "#333"
+                    },
+                    {
+                        type: "Text",
+                        content: " { ",
+                        fontSize: 10,
+                        grow: 0,
+                        fontColor: isDarkMode ? "#1c6bf1" : "#236a7c"
+                    },
+                    { type: "Container", children:[] }
+                ]
+            },
+            {
+                type: "RowLayout",
+                columnSize: "grow",
+                children: [
+                    {
+                        type: "Text",
+                        content: "      \"JSON-String\"",
+                        fontSize: 10,
+                        grow: 0,
+                        fontColor: isDarkMode ? "#1c6bf1" : "#236a7c"
+                    },
+                    {
+                        type: "Text",
+                        content: " : ",
+                        fontSize: 10,
+                        grow: 0,
+                        fontColor: isDarkMode ? "#fff" : "#333"
+                    },
+                    {
+                        type: "Text",
+                        content: "\"" + values.jsonString + "\"",
+                        fontSize: 10,
+                        grow: 0,
+                        fontColor: isDarkMode ? "#ce916a" : "#cb4b16"
+                    },
+                    {
+                        type: "Text",
+                        content: ",",
+                        fontSize: 10,
+                        grow: 0,
+                        fontColor: isDarkMode ? "#fff" : "#333"
+                    },
+                    { type: "Container", children:[] }
+                ]
+            },
+            {
+                type: "RowLayout",
+                columnSize: "grow",
+                children: [
+                    {
+                        type: "Text",
+                        content: "      \"Empty message\"",
+                        fontSize: 10,
+                        grow: 0,
+                        fontColor: isDarkMode ? "#1c6bf1" : "#236a7c"
+                    },
+                    {
+                        type: "Text",
+                        content: " : ",
+                        fontSize: 10,
+                        grow: 0,
+                        fontColor: isDarkMode ? "#fff" : "#333"
+                    },
+                    {
+                        type: "Text",
+                        content: "\"" + values.emptyMessage + "\"",
+                        fontSize: 10,
+                        grow: 0,
+                        fontColor: isDarkMode ? "#ce916a" : "#cb4b16"
+                    },
+                    { type: "Container", children:[] }
+                ]
+            },
+            {
+                type: "RowLayout",
+                columnSize: "grow",
+                children: [
+                    {
+                        type: "Text",
+                        content: "   } \n }",
+                        fontSize: 10,
+                        grow: 0,
+                        fontColor: isDarkMode ? "#1c6bf1" : "#236a7c"
+                    },
+                    { type: "Container", children:[] }
+                ]
+            }
+        ]
+    };
+}
 
 // export function getCustomCaption(values: BizzomateJSONViewerPreviewProps, platform: Platform): string {
 //     return "BizzomateJSONViewer";
