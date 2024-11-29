@@ -1,7 +1,7 @@
 {
   "name": "ciphixjsonviewer",
   "widgetName": "ciphixJSONViewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "View JSON strings with markup in Mendix",
   "copyright": "© Ciphix IO 2024",
   "author": "Jelle Dekker",

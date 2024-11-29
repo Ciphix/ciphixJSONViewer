@@ -136,7 +136,7 @@ export function getPreview(
         type: "Container",
         borders: true,
         borderRadius: 2,
-        backgroundColor: isDarkMode ? "#646464" : "#fefefe",
+        backgroundColor: isDarkMode ? "#313131" : "#fefefe",
         children: [
             {
                 type: "RowLayout",
