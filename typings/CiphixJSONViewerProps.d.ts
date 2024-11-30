@@ -21,6 +21,7 @@ export interface CiphixJSONViewerContainerProps {
 
 export interface CiphixJSONViewerPreviewProps {
     readOnly: boolean;
+    renderMode?: "design" | "xray" | "structure";
     jsonString: string;
     emptyMessage: string;
     indentWidth: number | null;
