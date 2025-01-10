@@ -1,8 +1,7 @@
 import { CiphixJSONViewerPreviewProps } from "../typings/CiphixJSONViewerProps";
+import { Properties, hidePropertyIn } from "@mendix/pluggable-widgets-tools";
 
 export type Platform = "web" | "desktop";
-
-export type Properties = PropertyGroup[];
 
 type PropertyGroup = {
     caption: string;
@@ -99,16 +98,17 @@ export type PreviewProps =
     | SelectableProps
     | DatasourceProps;
 
-export function getProperties(
-    _values: CiphixJSONViewerPreviewProps,
-    defaultProperties: Properties /* , target: Platform*/
-): Properties {
+export function getProperties(_values: CiphixJSONViewerPreviewProps, defaultProperties: Properties): Properties {
     // Do the values manipulation here to control the visibility of properties in Studio and Studio Pro conditionally.
-    /* Example
-    if (values.myProperty === "custom") {
-        delete defaultProperties.properties.myOtherProperty;
+
+    if (_values.collapseNodes !== true) {
+        hidePropertyIn(defaultProperties, _values, "collapseNodeLevel");
     }
-    */
+
+    if (_values.shortenText !== true) {
+        hidePropertyIn(defaultProperties, _values, "shortenTextAfterLength");
+    }
+
     return defaultProperties;
 }
 

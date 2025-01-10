@@ -1,5 +1,6 @@
 import { ReactElement, createElement, useEffect, useState } from "react";
 import JsonView from "@uiw/react-json-view";
+import { vscodeTheme } from "@uiw/react-json-view/vscode";
 
 import { CiphixJSONViewerContainerProps } from "../typings/CiphixJSONViewerProps";
 
@@ -34,8 +35,9 @@ export function CiphixJSONViewer(props: CiphixJSONViewerContainerProps): ReactEl
                 displayObjectSize={props.displayObjectSize}
                 indentWidth={props.indentWidth}
                 enableClipboard={props.enableClipboard}
-                collapsed={props.collapsed > 0 ? props.collapsed : undefined}
-                shortenTextAfterLength={props.shortenTextAfterLength}
+                collapsed={props.collapseNodes ? props.collapseNodeLevel : undefined}
+                shortenTextAfterLength={props.shortenText ? props.shortenTextAfterLength : 0}
+                style={props.theme === "vscode" ? vscodeTheme : undefined}
             />
         );
     } else {

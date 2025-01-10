@@ -5,6 +5,8 @@
  */
 import { DynamicValue, EditableValue } from "mendix";
 
+export type ThemeEnum = "default" | "vscode";
+
 export interface CiphixJSONViewerContainerProps {
     name: string;
     tabIndex?: number;
@@ -15,8 +17,11 @@ export interface CiphixJSONViewerContainerProps {
     displayObjectSize: boolean;
     displayDataTypes: boolean;
     enableClipboard: boolean;
+    collapseNodes: boolean;
+    collapseNodeLevel: number;
+    shortenText: boolean;
     shortenTextAfterLength: number;
-    collapsed: number;
+    theme: ThemeEnum;
 }
 
 export interface CiphixJSONViewerPreviewProps {
@@ -28,6 +33,9 @@ export interface CiphixJSONViewerPreviewProps {
     displayObjectSize: boolean;
     displayDataTypes: boolean;
     enableClipboard: boolean;
+    collapseNodes: boolean;
+    collapseNodeLevel: number | null;
+    shortenText: boolean;
     shortenTextAfterLength: number | null;
-    collapsed: number | null;
+    theme: ThemeEnum;
 }

@@ -1,10 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<widget id="ciphix.ciphixjsonviewer.CiphixJSONViewer" pluginWidget="true" needsEntityContext="true" offlineCapable="true" supportedPlatform="Web"
+<?xml version="1.0" encoding="utf-8" ?>
+<widget
+    id="ciphix.ciphixjsonviewer.CiphixJSONViewer"
+    pluginWidget="true"
+    needsEntityContext="true"
+    offlineCapable="true"
+    supportedPlatform="Web"
     xmlns="http://www.mendix.com/widget/1.0/"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd"
+>
     <name>Ciphix JSONViewer</name>
     <description>View JSON strings with markup in Mendix</description>
-    <icon/>
+    <icon />
     <properties>
         <propertyGroup caption="General">
             <propertyGroup caption="Data source">
@@ -12,46 +19,62 @@
                     <caption>JSON String</caption>
                     <description>Provide a valid, parsable JSON string</description>
                     <attributeTypes>
-                        <attributeType name="String"/>
+                        <attributeType name="String" />
                     </attributeTypes>
                 </property>
                 <property key="emptyMessage" type="textTemplate" required="false">
                     <caption>Empty message</caption>
-                    <description/>
-                </property>
-            </propertyGroup>
-            <propertyGroup caption="Customization">
-                <property key="indentWidth" type="integer" defaultValue="15">
-                    <caption>Indent width</caption>
-                    <description/>
-                </property>
-                <property key="displayObjectSize" type="boolean" defaultValue="true">
-                    <caption>Display object size</caption>
-                    <description/>
-                </property>
-                <property key="displayDataTypes" type="boolean" defaultValue="true">
-                    <caption>Display data types</caption>
-                    <description/>
-                </property>
-                <property key="enableClipboard" type="boolean" defaultValue="true">
-                    <caption>Enable clipboard</caption>
-                    <description/>
-                </property>
-                <property key="shortenTextAfterLength" type="integer" defaultValue="30">
-                    <caption>Shorten text</caption>
-                    <description/>
-                </property>
-                <property key="collapsed" type="integer" defaultValue="-1">
-                    <caption>Collapse nodes</caption>
-                    <description>Negative value will show all nodes; enter a positive number to indicate from what node the view should start collapsed</description>
+                    <description />
                 </property>
             </propertyGroup>
             <propertyGroup caption="Label">
-                <systemProperty key="Label"/>
+                <systemProperty key="Label" />
             </propertyGroup>
             <propertyGroup caption="Visibility">
-                <systemProperty key="Visibility"/>
+                <systemProperty key="Visibility" />
             </propertyGroup>
+        </propertyGroup>
+        <propertyGroup caption="Customization">
+            <property key="indentWidth" type="integer" defaultValue="15">
+                <caption>Indent width</caption>
+                <description />
+            </property>
+            <property key="displayObjectSize" type="boolean" defaultValue="true">
+                <caption>Display object size</caption>
+                <description />
+            </property>
+            <property key="displayDataTypes" type="boolean" defaultValue="true">
+                <caption>Display data types</caption>
+                <description />
+            </property>
+            <property key="enableClipboard" type="boolean" defaultValue="true">
+                <caption>Enable clipboard</caption>
+                <description />
+            </property>
+            <property key="collapseNodes" type="boolean" defaultValue="false">
+                <caption>Collapse nodes</caption>
+                <description />
+            </property>
+            <property key="collapseNodeLevel" type="integer" defaultValue="1">
+                <caption>Collapse node level</caption>
+                <description />
+            </property>
+            <property key="shortenText" type="boolean" defaultValue="true">
+                <caption>Shorten text</caption>
+                <description />
+            </property>
+            <property key="shortenTextAfterLength" type="integer" defaultValue="30">
+                <caption>Shorten text length</caption>
+                <description />
+            </property>
+            <property key="theme" type="enumeration" defaultValue="default">
+                <caption>Theme</caption>
+                <description />
+                <enumerationValues>
+                    <enumerationValue key="default">Default</enumerationValue>
+                    <enumerationValue key="vscode">VsCode</enumerationValue>
+                </enumerationValues>
+            </property>
         </propertyGroup>
     </properties>
 </widget>

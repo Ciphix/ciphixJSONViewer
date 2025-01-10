@@ -1,47 +1,41 @@
 import { ReactElement, createElement } from "react";
 import { CiphixJSONViewerPreviewProps } from "../typings/CiphixJSONViewerProps";
-import CSS from "csstype";
-
-const bracketStyle: CSS.Properties = { color: "#236a7c" };
-const nameStyle: CSS.Properties = { color: "#236a7c" };
-const contentStyle: CSS.Properties = { color: "#cb4b16" };
-const spacingStyle: CSS.Properties = { marginLeft: "15px" };
+import JsonView from "@uiw/react-json-view";
+import { vscodeTheme } from "@uiw/react-json-view/vscode";
 
 export function preview(props: CiphixJSONViewerPreviewProps): ReactElement {
+    const example = {
+        string: "Lorem ipsum dolor sit amet",
+        integer: 42,
+        float: 114.514,
+        null: null,
+        undefined,
+        timer: 0,
+        date: new Date("Tue Sep 13 2022 14:07:44 GMT-0500 (Central Daylight Time)"),
+        array: [19, 100.86, "test", NaN, Infinity],
+        nestedArray: [
+            [1, 2],
+            [3, 4]
+        ],
+        object: {
+            "first-child": true,
+            "second-child": false,
+            "last-child": null
+        },
+        string_number: "1234"
+    };
     return (
-        <div>
-            <div>
-                <span style={bracketStyle}>&#123;</span>
-            </div>
-            <div>
-                <span style={spacingStyle} />
-                <span style={nameStyle}>&quot;Data source&quot;</span>
-                <span> : </span>
-                <span style={bracketStyle}>&#123;</span>
-            </div>
-            <div>
-                <span style={spacingStyle} />
-                <span style={spacingStyle} />
-                <span style={nameStyle}>&quot;JSON-String&quot;</span>
-                <span> : </span>
-                <span style={contentStyle}>&quot;{props.jsonString}&quot;</span>
-                <span>,</span>
-            </div>
-            <div>
-                <span style={spacingStyle} />
-                <span style={spacingStyle} />
-                <span style={nameStyle}>&quot;Empty message&quot;</span>
-                <span> : </span>
-                <span style={contentStyle}>&quot;{props.emptyMessage}&quot;</span>
-                <span>,</span>
-            </div>
-            <div>
-                <span style={spacingStyle} />
-                <span style={bracketStyle}>&#125;</span>
-            </div>
-            <div>
-                <span style={bracketStyle}>&#125;</span>
-            </div>
-        </div>
+        <JsonView
+            value={example}
+            displayDataTypes={props.displayDataTypes}
+            displayObjectSize={props.displayObjectSize}
+            indentWidth={props.indentWidth ? props.indentWidth : 30}
+            enableClipboard={props.enableClipboard}
+            collapsed={props.collapseNodes === true && props.collapseNodeLevel ? props.collapseNodeLevel : undefined}
+            shortenTextAfterLength={
+                props.shortenText && props.shortenTextAfterLength ? props.shortenTextAfterLength : 0
+            }
+            style={props.theme === "vscode" ? vscodeTheme : undefined}
+        />
     );
 }
