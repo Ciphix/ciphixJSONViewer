@@ -13,6 +13,7 @@ export interface CiphixJSONViewerContainerProps {
     id: string;
     jsonString: EditableValue<string>;
     emptyMessage?: DynamicValue<string>;
+    errorMessage?: DynamicValue<string>;
     indentWidth: number;
     displayObjectSize: boolean;
     displayDataTypes: boolean;
@@ -29,6 +30,7 @@ export interface CiphixJSONViewerPreviewProps {
     renderMode?: "design" | "xray" | "structure";
     jsonString: string;
     emptyMessage: string;
+    errorMessage: string;
     indentWidth: number | null;
     displayObjectSize: boolean;
     displayDataTypes: boolean;

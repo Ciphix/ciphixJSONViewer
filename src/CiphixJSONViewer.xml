@@ -26,6 +26,10 @@
                     <caption>Empty message</caption>
                     <description />
                 </property>
+                <property key="errorMessage" type="textTemplate" required="false">
+                    <caption>Error message</caption>
+                    <description />
+                </property>
             </propertyGroup>
             <propertyGroup caption="Label">
                 <systemProperty key="Label" />
